@@ -1,5 +1,12 @@
+header{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
 .profileInfo{
-    float: right    ;
+    /* float: right    ; */
     position: relative;
     min-width: 250px;
     padding: 1em;
@@ -23,17 +30,22 @@
     }
 }
 
-/* .calendar_color{
+.calendar_color{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    margin-bottom: 3em;
+    justify-content: space-between;
+    /* margin-bottom: 3em; */
 
-    img[alt*="Calendario"]{
+    /* img[alt*="Caendario"]{
         width: 140px;
         margin-right: 2em;
+    } */
+
+    input[type="date"]{
+        padding: 1em;
+        margin-top: 1em;
     }
-} */
+}
 
 .colorProjects{
     max-width: 200px;

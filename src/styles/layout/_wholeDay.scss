@@ -1,0 +1,81 @@
+.wholeDay{
+    position: fixed;
+    top: 1em;
+    left: 6%;
+    width: 86%;
+    height: 96%;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 10px;
+
+    h3{
+        margin-top: .5em;
+        margin-bottom: 1em;
+        padding: 1em;
+        text-align: center;
+    }
+
+    .icon{
+        position: absolute;
+        top: .5em;
+        right: .5em;
+        font-size: 2rem;
+        font-weight: 900;
+        cursor: pointer;
+    }
+
+    .hoursInfo{
+        width: 100%; 
+        height: 83%;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        align-items: center;     
+
+        div {
+            height: 1.1em;
+            width: 22%;
+            font-size: .8rem;
+            line-height: 13px;
+            border-bottom: 1px solid black;
+        }
+
+        .minutes {
+            display: inline-flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            height: 2.5em;
+            padding-top: 5px;
+            line-height: 18px;
+            overflow: hidden;
+
+            .activitiesListed {
+                display: block;
+                width: calc(100% - 3em);
+                padding: 5px;
+                background-color: red;
+                border-radius: 3px;
+                text-transform: capitalize;
+                color: white;
+                cursor: pointer;
+
+                b{
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        
+    }
+
+    
+
+    /* table{
+        width: 100%;
+        
+        th, td{
+            border-bottom: 1px solid black;
+        }
+    } */
+    
+}

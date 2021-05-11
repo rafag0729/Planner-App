@@ -1,0 +1,48 @@
+.wholeWeek{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+
+.dayFromWeek{
+    position: relative;
+    width: 155px;
+    padding: 1em;
+    margin: .3em;
+    line-height: 1.1rem;
+    border-radius: 7px;
+    border: 1px solid black;
+    cursor: pointer;
+
+    h4{
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    > div{
+        display: inline-flex;
+        flex-flow: row wrap;   
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: 1px solid black;     
+
+        > div{
+            display: inline-flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            width: 80%;
+
+            .ActivityOfDayWeek{
+                padding: 0 2px;
+                margin-right: 5px;
+                font-size: 0.8rem;
+                text-transform: capitalize;
+                background-color: green;
+                border-radius: 5px;
+                color: white;
+            }
+        }
+    }
+}
