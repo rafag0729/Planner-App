@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { hideAddEditActivities } from './../redux/actions/uiActions';
+import { hideAddEditActivities } from '../redux/actions/uiActions';
 import closeIcon from './../assets/close.svg';
 import { startAddingActivity, startUpdatingActivity, startDeletingActivity } from '../redux/actions/activitiesActions';
 import { removingActivitySelected } from '../redux/actions/selectedActions';
@@ -30,7 +30,7 @@ export const AddEditActivity = ({ activitySelected }) => {
             setFormValues({...activitySelected})
         }
 
-    }, [])
+    }, [activitySelected])
 
     /* Component functions */
     const handleInputChange = ({target}) => {
@@ -67,12 +67,10 @@ export const AddEditActivity = ({ activitySelected }) => {
                 onSubmit={ handleSubmit }>
                 { !activitySelected ? <h2>Agrega una nueva actividad</h2> : <h2>Edita esta actividad</h2> }
                 <span>
-                    <img
-                        className="icon"
-                        onClick={ closeAddEditActivities }
-                        src={ closeIcon } 
-                        alt="Closing icon"/>
-                </span>{/* Review this*/}
+                    <svg className="close_icon" width="24" height="24">
+                        <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/>
+                    </svg>
+                </span>
 
                 <div>
                     <label htmlFor="project">Proyecto</label>
@@ -135,18 +133,25 @@ export const AddEditActivity = ({ activitySelected }) => {
                 </div>
 
                 <div className="btns">
-                    <button type="reset">Limpiar</button>
+                    <input 
+                        className="cancel"
+                        type="button"
+                        value="Limpiar"/>
 
                     { activitySelected && (
-                        <button 
-                            onClick={ handleDelete }>Eliminar
-                        </button>)}
+                        <input 
+                            className="cancel"
+                            type="button"
+                            onClick={ handleDelete }
+                            value="Cancelar"/>)}
                     
                     {
                         !activitySelected 
                             ? <button
+                                    className="confirm"
                                     type="submit">Confirmar</button>
                             : <button 
+                                className="confirm"
                                 onClick={ handleUpdate }
                                 type="submit">Actualizar</button>
                     }

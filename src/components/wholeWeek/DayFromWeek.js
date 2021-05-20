@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useSelector } from 'react-redux';
 import moment from 'moment';
-import { gettingDateFormat, settingTime } from '../helpers/helperFunctions';
+import { gettingDateFormat, settingTime } from '../../helpers/helperFunctions';
+import { ColorContext } from '../../context/ColorContext';
 
 export const DayFromWeek = ({date, dispatchingDayModal}) => {
 
     /* Redux */
     const activities = useSelector(state => state.activities)
 
+    /* Context */
+    const { color } = useContext(ColorContext);
+    
     /* Helper functions */
     const { dayName, dayNumber, month } = gettingDateFormat(date);
     const hoursFromDay = settingTime(date);
@@ -29,16 +33,17 @@ export const DayFromWeek = ({date, dispatchingDayModal}) => {
                                         activities.map(({startTime, day, project }, i) => {
                                             if(moment(hour).isSame(`${day} ${startTime}`, 'hour')){
                                                 return (
-                                                    <span 
+                                                    <span
+                                                        style={ { backgroundColor: color.find(({name, color}) => (name === project) && color).color }}
                                                         className="ActivityOfDayWeek"
                                                         key={i}>
-                                                        { project.slice(0,3) }
                                                     </span>
                                                 )
                                             }
                                         })
                                     }
                                     </div>
+
                             </div>
                         )
                     )

@@ -1,5 +1,5 @@
 import React from 'react'
-import { settingMinutesFromHour } from '../helpers/helperFunctions';
+import { settingMinutesFromHour } from '../../helpers/helperFunctions';
 import { Minutes } from './Minutes';
 
 export const Hours = ({activitiesOfDay, day, hour, setActivitySelected}) => {

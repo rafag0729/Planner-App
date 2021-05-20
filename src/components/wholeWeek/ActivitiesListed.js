@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import moment from 'moment';
+import { ColorContext } from '../../context/ColorContext';
 import { useDispatch } from 'react-redux';
-import { showAddEditActivities } from '../redux/actions/uiActions';
-import { AddEditActivity } from './AddEditActivity';
-import { settingActivitySelected } from '../redux/actions/selectedActions';
+import { showAddEditActivities } from '../../redux/actions/uiActions';
+import { settingActivitySelected } from '../../redux/actions/selectedActions';
 
 export const ActivitiesListed = ({ activity, formattedDay, formattedHour, formattedMin }) => {
 
     /* Redux */
     const dispatch = useDispatch();
+
+    /* Context */
+    const { color } = useContext(ColorContext)
 
     /* Props */
     const {day, startTime, endTime, project, projectType} = activity;
@@ -27,6 +30,7 @@ export const ActivitiesListed = ({ activity, formattedDay, formattedHour, format
     const activityResult = (project, projectType) => (
         <span
             onClick={ handleClick }
+            style={{ backgroundColor: color.find(({name}) => name === project ).color }}
             className="activitiesListed">
                 <b> {project} </b> {projectType}
         </span>

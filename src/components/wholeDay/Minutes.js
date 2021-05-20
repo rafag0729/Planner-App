@@ -1,17 +1,16 @@
 import moment from 'moment';
-import React, { useCallback } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { formattingDate, formattingHoursMinutes } from '../helpers/helperFunctions';
-import { settingHourMinSelected } from '../redux/actions/selectedActions';
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { formattingDate, formattingHoursMinutes } from '../../helpers/helperFunctions';
+import { settingHourMinSelected } from '../../redux/actions/selectedActions';
 
-import { showAddEditActivities } from '../redux/actions/uiActions'
-import { ActivitiesListed } from './ActivitiesListed';
+import { showAddEditActivities } from '../../redux/actions/uiActions'
+import { ActivitiesListed } from '../wholeWeek/ActivitiesListed';
 
-export const Minutes = ({ activitiesOfDay, day, hour, min, setActivitySelected }) => {
-    /* console.log('Day on minutesComp: ', day); */
+export const Minutes = ({ activitiesOfDay, day, hour, min }) => {
+    
     /* Redux */
-    const dispatch = useDispatch()
-    const activities = useSelector(state => state.activities);
+    const dispatch = useDispatch();
 
     /* HelperFunctions */
     const formattedDay = formattingDate(moment(day));

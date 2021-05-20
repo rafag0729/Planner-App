@@ -8,8 +8,44 @@ $regularText: 'Poppins', sans-serif;
 
 /* Colors */
 
-$deep-red: #B20000;
-$black: #000000;
-$light-red: #FFA0A0;
-$gray: #595959;
-$white: #FFFFFF;
+
+/* - Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+- Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+- White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%)
+
+
+- Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+- Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
+- Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)*/
+
+$blue: #35357eff;
+$violet: #881a9aff;
+$violetLight: #a109e2ff;
+
+
+
+/* LightMode */
+$LMPrimary: hsl(240, 41%, 35%);
+$LMSecondary: hsl(292, 71%, 35%);
+$LMTertiary: hsl(282, 92%, 46%);
+
+$LMHeading: hsl(240, 41%, 35%);
+$LMElements: hsl(0, 0%, 100%);
+$LMText: hsl(200, 15%, 8%);
+$LMBackground: hsl(0, 0%, 98%);
+$LMInput: hsl(0, 0%, 52%);
+$LMShadowOpacity: .2;
+
+
+/* Dark mode */
+$DMPrimary: rgb(255, 255, 255);
+$DMSecondary: rgb(255, 255, 255);
+$DMTertiary: rgb(255, 255, 255);
+
+$DMHeading: hsl(0, 0%, 100%);
+$DMElements: hsl(240, 35%, 44%);
+$DMBackground: hsl(240, 41%, 35%);
+$DMText: hsl(0, 0%, 100%);
+$DMInput: hsl(209, 23%, 22%);
+
+

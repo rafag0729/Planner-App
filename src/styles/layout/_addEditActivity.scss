@@ -12,10 +12,12 @@
         padding: 3em;
         margin: 0 auto;
         border-radius: 15px;
-        background-color: white;
+        background-color: var(--elements-color);
         transform: translateY(5%);
+        box-shadow: 0px 18px 15px rgba(0, 0, 0, .1);
 
         h2{
+            margin-top: 0;
             margin-bottom: 1em;
         }
 
@@ -46,14 +48,35 @@
             display: flex;
             justify-content: flex-end;
             margin-bottom: 0;
-            
-            button{
+
+            input[type="button"], button{
                 padding: 1em;
                 margin-left: 2em;
+                border: none;
+                border-radius: 5px;
+                color: white;
+                cursor: pointer;
+
+                transition: all .5s ease-in-out;
+            }
+
+            input[type="button"]:hover, button:hover{
+                opacity: .6;
+            }
+
+            .confirm{
+                background-color: $violet;
+            }
+
+            .cancel{
+                background-color: $violetLight;
             }
         }
     }
 }
+
+
+
 
 /* CSS Transition */
 .addEditTransition-enter{

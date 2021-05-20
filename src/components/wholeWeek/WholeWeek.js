@@ -1,14 +1,14 @@
-import React, {useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { WholeDay } from './WholeDay';
+import { WholeDay } from './../../container/WholeDay';
     
-import { showDayModal } from './../redux/actions/uiActions';
+import { showDayModal } from '../../redux/actions/uiActions';
 
-import { formattingDate } from './../helpers/helperFunctions';
+import { formattingDate } from '../../helpers/helperFunctions';
 import { DayFromWeek } from './DayFromWeek';
-import { settingDaySelected } from '../redux/actions/selectedActions';
+import { settingDaySelected } from '../../redux/actions/selectedActions';
 
 export const WholeWeek = ({dates}) => {
     

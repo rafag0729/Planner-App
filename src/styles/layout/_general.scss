@@ -3,33 +3,59 @@
     margin: 0;
     box-sizing: border-box;
 }
+/* 
+    Color for shadows 
+    styling input and shadow
+
+*/
+:root{
+    --primary-color: #{$LMPrimary};
+    --secondary-color: #{$LMSecondary};
+    --tertiary-color: #{$LMTertiary};
+
+    --headings-color: #{$LMHeading};
+    --elements-color: #{$LMElements};
+    --background-color: #{$LMBackground};
+    --text-color: #{$LMText};
+    --input-color: #{$LMInput}; 
+}
+
+.dark{
+    --primary-color: #{$DMPrimary};
+    --secondary-color: #{$DMSecondary};
+    --tertiary-color: #{$DMTertiary};
+
+    --headings-color: #{$DMHeading};
+    --elements-color: #{$DMElements};
+    --background-color: #{$DMBackground};
+    --text-color: #{$DMText};
+    --input-color: $DMElements;
+}
 
 body{
     font-family: $regularText;
-    font-size: 93%;
-    /* color: $gray; */
+    font-size: 88%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+    transition: background-color .3s linear;
 }
 
 h1{
     padding: .5em;
-    /* margin-bottom: 1em; */
     font-family: $headingApp;
     text-align: right;
     letter-spacing: 2px;
-    /* color: $deep-red; */
 }
 
-h2{
-    font-family: $headings;
-    text-align: right;
-    /* margin-right: 2em; */
+h2{ 
+    margin-top: 1em;
     padding: 1em;
-    /* margin-bottom: 1em; */
 }
 
 h2, h3, h4, h5 {
     font-weight: 600;
-    /* color: $deep-red; */
+    color: var(--headings-color);
 }
 
 .container {
@@ -38,3 +64,9 @@ h2, h3, h4, h5 {
     margin: 0 auto;
 }
 
+@media screen and (max-width: 430px){
+
+    body{
+        font-size: 83%;
+    }
+}
