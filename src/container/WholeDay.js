@@ -6,7 +6,6 @@ import { Hours } from '../components/wholeDay/Hours';
 import { hideDayModal } from '../redux/actions/uiActions';
 
 import { gettingDateFormat, settingTime } from '../helpers/helperFunctions';
-import closeIcon from './../assets/close.svg'
 import { AddEditActivity } from './AddEditActivity';
 import moment from 'moment';
 
@@ -39,19 +38,14 @@ export const WholeDay = ({day}) => {
 
     return (
         <div
-            onMouseLeave={ closeDayModal } 
+            /* onMouseLeave={ closeDayModal }  */
             className="wholeDay">
             <h3>{`${dayName} ${dayNumber} de ${month}`}</h3>
             
-            <span>
+            <span onClick={ closeDayModal }>
                 <svg className="close_icon" width="24" height="24">
                     <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/>
                 </svg>
-                {/* <img
-                    className="icon"
-                    onClick={ closeDayModal }
-                    src={ closeIcon } 
-                    alt="Close"/> */}
             </span>
 
             <div className="hoursInfo">

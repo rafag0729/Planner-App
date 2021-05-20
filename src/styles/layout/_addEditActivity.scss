@@ -13,7 +13,7 @@
         margin: 0 auto;
         border-radius: 15px;
         background-color: var(--elements-color);
-        transform: translateY(5%);
+        /* transform: translateY(5%); */
         box-shadow: 0px 18px 15px rgba(0, 0, 0, .1);
 
         h2{
@@ -32,16 +32,44 @@
             display: flex;
             justify-content: space-between;
             margin-bottom: 2em;
+
+            label{
+                margin-bottom: .3em;
+            }
         }
 
         select{
-            width: 300px;
-            height: 25px;
+            max-width: 300px;
+            width: 100%;
+            min-width: 100px;
+            padding: .5em;
+            border: none;
+            border-bottom: 1px solid var(--primary-color);
+            font-size: 1.05rem;
+            font-weight: bold;
+            color: $violet;
+            outline-color: var(--secondary-color);
         }
 
         textarea{
-            width: 300px;
+            max-width: 300px;
+            width: 100%;
+            min-width: 100px;
             height: 120px;
+            padding: .5em;
+            border-bottom: 2px solid var(--primary-color);
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: $violet;
+            outline-color: var(--secondary-color);
+        }
+
+        input[type="time"]{
+            padding: .2em;
+            font-size: 1.2rem;
+            color: $violet;
+            outline-color: var(--secondary-color);
         }
 
         .btns{
@@ -76,8 +104,6 @@
 }
 
 
-
-
 /* CSS Transition */
 .addEditTransition-enter{
     opacity: 0;
@@ -95,4 +121,43 @@
 .addEditTransition-exit-active{
     opacity: 0;
     transition: opacity 200ms;
+}
+
+@media screen and (max-width: 800px){
+
+    .AddEditActivity{
+
+        form {
+            transform: translateY(1%);
+
+            > div {
+                flex-direction: column;
+                margin-bottom: .5em;
+            }
+
+            .btns{
+                input[type="button"], button{
+                    margin-top: .5em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    .AddEditActivity{
+
+        form{
+            width: 80%;
+        }
+    }
+}
+
+@media screen and (max-width: 400px){
+    .AddEditActivity{
+
+        form{
+            width: 95%;
+        }
+    }
 }

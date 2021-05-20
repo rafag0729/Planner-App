@@ -13,6 +13,8 @@
     --secondary-color: #{$LMSecondary};
     --tertiary-color: #{$LMTertiary};
 
+    --logo-color: #{$LMLogoIcon};
+    --profile-color: #{$LMProfileColor};
     --headings-color: #{$LMHeading};
     --elements-color: #{$LMElements};
     --background-color: #{$LMBackground};
@@ -25,6 +27,8 @@
     --secondary-color: #{$DMSecondary};
     --tertiary-color: #{$DMTertiary};
 
+    --logo-color: #{$DMLogoIcon};
+    --profile-color: #{$DMProfileColor};
     --headings-color: #{$DMHeading};
     --elements-color: #{$DMElements};
     --background-color: #{$DMBackground};
@@ -34,7 +38,7 @@
 
 body{
     font-family: $regularText;
-    font-size: 88%;
+    font-size: 95%;
     background-color: var(--background-color);
     color: var(--text-color);
 
@@ -67,6 +71,6 @@ h2, h3, h4, h5 {
 @media screen and (max-width: 430px){
 
     body{
-        font-size: 83%;
+        font-size: 90%;
     }
 }

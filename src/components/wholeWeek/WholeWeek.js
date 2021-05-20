@@ -53,7 +53,7 @@ export const WholeWeek = ({dates}) => {
                 in={ modalDayDetail }
                 timeout={500}
                 unmountOnExit
-                classNames="addEditTransition">
+                classNames="wholeDayTransition">
                     <div>
                         <WholeDay day={ daySelected } />
                     </div>

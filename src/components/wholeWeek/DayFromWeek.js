@@ -30,7 +30,7 @@ export const DayFromWeek = ({date, dispatchingDayModal}) => {
                                     
                                     <div>
                                     {
-                                        activities.map(({startTime, day, project }, i) => {
+                                        activities.map(({startTime, endTime, day, project }, i) => {
                                             if(moment(hour).isSame(`${day} ${startTime}`, 'hour')){
                                                 return (
                                                     <span
@@ -40,6 +40,28 @@ export const DayFromWeek = ({date, dispatchingDayModal}) => {
                                                     </span>
                                                 )
                                             }
+                                            if(moment(hour).isBetween(`${day} ${startTime}`, `${day} ${endTime}`, 'minute')){
+                                                return (
+                                                    <span
+                                                        style={ { backgroundColor: color.find(({name, color}) => (name === project) && color).color }}
+                                                        className="ActivityOfDayWeek"
+                                                        key={i}>
+                                                    </span>
+                                                )
+                                            }
+                                            if(moment(hour).isSame(`${day} ${endTime}`, 'hour')){
+                                                return (
+                                                    <span
+                                                        style={ { backgroundColor: color.find(({name, color}) => (name === project) && color).color }}
+                                                        className="ActivityOfDayWeek"
+                                                        key={i}>
+                                                    </span>
+                                                )
+                                            }
+                                            else {
+                                                return ""
+                                            }
+
                                         })
                                     }
                                     </div>
