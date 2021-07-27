@@ -24,7 +24,6 @@
         cursor: pointer;
 
         path{
-            d: path("M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z");
             fill: var(--primary-color);
         }
     }
@@ -49,7 +48,7 @@
             display: inline-flex;
             flex-flow: row wrap;
             justify-content: space-between;
-            height: 2.8em;
+            height: 2.4em;
             padding-top: 5px;
             line-height: 18px;
             overflow: hidden;
@@ -74,20 +73,39 @@
 /* CSS Transition */
 .wholeDayTransition-enter{
     opacity: 0;
+
+    .wholeDay{
+        top: -110%;
+    }
+    
 }
 
 .wholeDayTransition-enter-active{
     opacity: 1;
     transition: opacity 200ms;
+
+    .wholeDay{
+        top: 1em;
+        transition: all 500ms;
+    }
 }
 
 .wholeDayTransition-exit{
     opacity: 1;
+
+    .wholeDay{
+        top: 1em;
+    }
 }
 
 .wholeDayTransition-exit-active{
     opacity: 0;
     transition: opacity 200ms;
+
+    .wholeDay{
+        top: 150%;
+        transition: all 500ms;
+    }
 }
 
 

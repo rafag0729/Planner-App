@@ -38,7 +38,7 @@
 
 body{
     font-family: $regularText;
-    font-size: 95%;
+    font-size: 88%;
     background-color: var(--background-color);
     color: var(--text-color);
 
@@ -71,6 +71,6 @@ h2, h3, h4, h5 {
 @media screen and (max-width: 430px){
 
     body{
-        font-size: 90%;
+        font-size: 84%;
     }
 }

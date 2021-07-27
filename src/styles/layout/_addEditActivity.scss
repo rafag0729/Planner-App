@@ -13,7 +13,7 @@
         margin: 0 auto;
         border-radius: 15px;
         background-color: var(--elements-color);
-        /* transform: translateY(5%); */
+        transform: translateY(5%);
         box-shadow: 0px 18px 15px rgba(0, 0, 0, .1);
 
         h2{
@@ -45,7 +45,7 @@
             padding: .5em;
             border: none;
             border-bottom: 1px solid var(--primary-color);
-            font-size: 1.05rem;
+            font-size: .8rem;
             font-weight: bold;
             color: $violet;
             outline-color: var(--secondary-color);
@@ -59,7 +59,7 @@
             padding: .5em;
             border-bottom: 2px solid var(--primary-color);
             border-radius: 5px;
-            font-size: 1.1rem;
+            font-size: .8rem;
             font-weight: bold;
             color: $violet;
             outline-color: var(--secondary-color);
@@ -67,7 +67,7 @@
 
         input[type="time"]{
             padding: .2em;
-            font-size: 1.2rem;
+            font-size: .8rem;
             color: $violet;
             outline-color: var(--secondary-color);
         }
@@ -107,20 +107,38 @@
 /* CSS Transition */
 .addEditTransition-enter{
     opacity: 0;
+
+    .AddEditActivity form{
+        transform: translateY(-150%);
+    }
 }
 
 .addEditTransition-enter-active{
     opacity: 1;
     transition: opacity 200ms;
+
+    .AddEditActivity form{
+        transform: translateY(5%);
+        transition: all 500ms;
+    }
 }
 
 .addEditTransition-exit{
     opacity: 1;
+
+    .AddEditActivity form{
+        transform: translateY(5%);
+    }
 }
 
 .addEditTransition-exit-active{
     opacity: 0;
     transition: opacity 200ms;
+
+    .AddEditActivity form{
+        transform: translateX(150%);
+        transition: all 500ms;
+    }
 }
 
 @media screen and (max-width: 800px){

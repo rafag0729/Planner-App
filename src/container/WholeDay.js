@@ -38,7 +38,7 @@ export const WholeDay = ({day}) => {
 
     return (
         <div
-            /* onMouseLeave={ closeDayModal }  */
+            onMouseLeave={ closeDayModal } 
             className="wholeDay">
             <h3>{`${dayName} ${dayNumber} de ${month}`}</h3>
             

@@ -57,12 +57,13 @@ export const AddEditActivity = ({ activitySelected }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch( startAddingActivity( formValues, day) );
+        hideAddEditActivities();
     }
 
     return (
         <div className="AddEditActivity">
             <form 
-                /* onMouseLeave={ closeAddEditActivities } */
+                onMouseLeave={ closeAddEditActivities }
                 onSubmit={ handleSubmit }>
                 { !activitySelected ? <h2>Agrega una nueva actividad</h2> : <h2>Edita esta actividad</h2> }
                 <span
