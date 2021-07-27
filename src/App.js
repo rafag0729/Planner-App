@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Provider } from "react-redux";
-import { CronosApp } from "./container/CronosApp";
+import { PlannerApp } from "./container/PlannerApp";
 import { store } from "./redux/store/store";
 import { ColorContext } from './context/ColorContext';
 
@@ -18,7 +18,7 @@ export const App = () => {
     return (
     <Provider store={ store }>
         <ColorContext.Provider value={ {color, setColor} }>
-            <CronosApp/>
+            <PlannerApp/>
         </ColorContext.Provider>
     </Provider>
   )

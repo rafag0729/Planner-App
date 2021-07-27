@@ -8,7 +8,7 @@ import { formattingDate, settingDaysFromWeek } from '../helpers/helperFunctions'
 import { startFirstLoadingActivities } from '../redux/actions/activitiesActions';
 import { ColorContext } from '../context/ColorContext';
 
-export const CronosApp = () => {
+export const PlannerApp = () => {
     
     /* Redux */
     const dispatch = useDispatch();
@@ -56,19 +56,16 @@ export const CronosApp = () => {
         <>
             <header>
                 <div className="container">
-                    <svg onClick={ darkMode } id="cronos_logo" width="60.067mm" height="17.387mm" version="1.1" viewBox="0 0 60.067 17.387" xmlns="http://www.w3.org/2000/svg">
-                        <g transform="translate(-130.08 -96.101)">
-                            <path />
-                        </g>
-                    </svg>
+                    <h1
+                        onClick={ darkMode}
+                    >PLANNER APP</h1>
                     
                     <div className="profileInfo">
                         <p>Nombre del usuario</p>
-                        <p>correo@olsoftware.com</p>
+                        <p>correo@correo.com</p>
                         <svg className="userIcon" width="24" height="24">
                             <path />
                         </svg>
-                        {/* <img src={ userIcon } alt="Imagen del usuario"/> */}
                     </div>
                 </div>
             </header>
